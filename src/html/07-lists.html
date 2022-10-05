@@ -1,0 +1,119 @@
+<!-- [ Lists in HTML ] are represented with the tag (<li></li> list item), both in the ol and in the ul are used to list content, although with CSS we can give it the same appearance, the browser You will understand it this way we put it, so there are 3 types:
+
+ul -> Unorderer list, they are used when the order of the list is not important (Example: Shopping list)
+
+ol -> Order list, is used when the order of the list is important, giving it a numerical order (Example: Top 10)
+
+[* ALL NAVIGATION MENUS *] whether drop-down or not, are made with <ul></ul>
+
+dl -> Difinition list, is used to give a list of specific definitions (Example: Dictionary)
+
+Each element of a definition list carries 2 labels:
+
+dt -> Definition term, it is the term that we are going to define
+dd -> Definition description, is the description of the term
+
+Nested lists can be built by having in one of the <li></li> another <ul>
+  <ol> as needed -->
+
+
+<!-- [ LIST ATTRIBUTES ] 
+
+  We can put both icons, photos, whatever we want with CSS, unless we need to put something directly from HTML.
+
+  ul -> Can be type= "(disc 'default', square and circle)"
+
+  ol -> It can be:
+  
+  type="": Numbering style (1, A, a, I, i)
+  start="": Start of a sequence (start from a number onwards)
+
+  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lists</title>
+</head>
+
+<body>
+  <h1>List types</h1>
+
+  <!-- Simple navbar example -->
+  <h2>Navigation menu</h2>
+
+  <nav>
+    <ul>
+      <li><a href="#Post1">Post1</a></li>
+      <li><a href="#Post2">Post2</a></li>
+      <li><a href="#Post3">Post3</a></li>
+      <li><a href="#Post4">Post4</a></li>
+      <li><a href="#Post5">Post5</a></li>
+    </ul>
+  </nav>
+
+  <!-- Unordered list -->
+  <h2>Unordered list</h2>
+
+  <ul type="square">
+    <li>Bread</li>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Cheese</li>
+    <li>Chocolate</li>
+  </ul>
+
+    <!-- Ordered list -->
+    <h2>Ordered list</h2>
+
+    </ol>
+      <li>HTML</li>
+      <li>CSS3</li>
+      <li>Javascrypt</li>
+      <li>Typescript</li>
+      <li>Git</li>
+      <li>React</li>
+      <li>Nextjs</li>
+      <li>GraphQL</li>
+      <li>Mocha</li>
+    </ol>
+
+  <!-- Ordered and unordered list mixed -->
+  <h2>Ordered and unordered list mixed, including (Romand numerals)</h2>
+
+  <ol type="I" start="5">
+    <li>Structure</li>
+  <ul type="circle">Introduction:
+    <li>Bases</li>
+    <li>Begginer level</li>
+    <li>Intermedaite level</li>
+  </ul>
+    <li>Professional level</li>
+    <li>Expert level</li>
+  </ol>
+
+  <!-- To set a title and description of anything 'dl', 'dt', 'dd' -->
+  <h2>Frontend tools and languages</h2>
+
+  <dl>
+    <dt>HTML</dt>
+    <dd>Hypertext Markup Language is the markup language used to structure data on a web page.</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascade Style Sheets is a layout language used to style HTML.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>It's a programming language that is used to provide interactivity on a website.</dd>
+
+    <dt>TypeScript</dt>
+    <dd>It's a free and open source programming language developed and maintained by Microsoft</dd>
+  </dl>
+
+</body>
+
+</html>
