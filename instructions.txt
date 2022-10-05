@@ -1,0 +1,51 @@
+<!-- [ WHAT IS THE WEB ?!] -->
+
+World Wide Web (WWW.)
+
+The World Wide Web—commonly referred to as WWW, W3, or the Web—is an interconnected system of public webpages accessible through the Internet. 
+
+- The Web is not the same as the Internet
+- The Web is one of many applications built on top of the internet
+
+Tim Berners-Lee proposed the architecture of what became known as the World Wide Web. He created the first web server, web browser, and webpage on his computer at the CERN physics research lab in 1990. In 1991, he announced his creation on the alt.hypertext newsgroup, marking the moment the Web was first made public.
+
+The system we know today as "the Web" consists of several components:
+
+The HTTP protocol governs data transfer between a server and a client.
+To access a Web component, a client supplies a unique universal identifier, called a URL 'uniform resource locator' or URI 'uniform resource identifier' (formally called Universal Document Identifier (UDI)).
+
+HTML (hypertext markup language) is the most common format for publishing web documents, linking and connecting resources through hyperlinks, is a defining concept of the Web, aiding its identity as a collection of connected documents.
+
+Soon after inventing the Web, Tim Berners-Lee founded the W3C (World Wide Web Consortium) to standardize and develop the Web further.This consortium consists of core Web interest groups, such as web browser developers, government entities, researchers and universities among others.
+
+
+
+USABILITY AND IMPLEMENTATIONS <--
+
+Try to learn the exercises following an ascending order of the sections, as it's important to understand the learning HTML patterns.
+
+You should start in your favorite code editor the 'LiveServer' extension or localhost to see changes in the browser at real time.
+
+After you start LiveServer or similar, you will see in the browser something like that:
+
+http:// 127.0.0.1:5500/index.html
+http:// localhost:5500/index.html
+
+So, you need to change just the name of the folderand file you want to visit!
+
+HTTP:// HOST & PORT /SRC source/ HTML folder/ file-name.html
+
+  http:// 127.0.0.1:5500/html/01-block-elements.html
+  http:// 127.0.0.1:5500/html/02-line-elements.html
+  http:// 127.0.0.1:5500/html/03-anchor-elements.html
+  http:// 127.0.0.1:5500/html/04-atributes.html
+  http:// 127.0.0.1:5500/html/05-block-tags.html
+  http:// 127.0.0.1:5500/html/06-line-tags.html
+  http:// 127.0.0.1:5500/html/07-lists.html
+  http:// 127.0.0.1:5500/html/08-links.html
+  http:// 127.0.0.1:5500/html/09-section-vs-article.html
+  http:// 127.0.0.1:5500/html/10-forms.html
+  http:// 127.0.0.1:5500/html/11-tables.html
+  http:// 127.0.0.1:5500/html/12-embedded-content.html
+
+START practice -->
