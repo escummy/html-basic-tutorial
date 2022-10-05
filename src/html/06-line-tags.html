@@ -1,0 +1,51 @@
+<!-- Inline tags:
+
+  span -> It's a line container, equivalent to div, it is usually used to enclose words or small texts and thus style it through CSS, or to locate them from JavaScript (semantically it does not mean anything)
+
+  q -> It's the equivalent of blockquote, it means quote and that is why the block quote is called <blockquote>, and it's used to put important quotes but in one line, it can also have the attribute cite="https://. ......."
+
+  code -> It serves to enclose precisely the code that we want to represent visually, it is usually attached to the <pre> tag
+
+  SPECIAL ENTITIES IN HTML - ASCII Code https://ascii.cl/es/codigos-html.htm -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Line tags</title>
+</head>
+
+<body>
+  <!-- Span -->
+  <span>I am a span and my line finish where text finish</span>
+
+  <!-- Anotations and cites -->
+  <section>
+    <article>
+      <p>
+        <i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eius a dolore laboriosam? Deleniti debitis asperiores sed commodi officiis ex suscipit nemo culpa ducimus deserunt, numquam placeat aperiam ipsa tenetur iure fugit cum necessitatibus, magnam rem unde ipsum distinctio accusamus? Similique deleniti laudantium eos ipsum saepe nostrum expedita labore exercitationem.
+        </i>
+      </p>
+    </article>
+  </section>
+  <q cite="https://validator.w3.org/nu/#textarea">I am a text with QUOTES to cite this article for example</q>
+
+  <!-- We simulate real code snippets -->
+  <pre>
+    <code>
+      app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`)
+      });
+    </code>
+  </pre>
+
+</body>
+<footer>
+  <!-- Simbolo copyright as H6 -->
+  <h6>2022 - All right reserved &#169; Your name</h6>
+</footer>
+
+</html>
