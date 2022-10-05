@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<!-- The links:
+  
+  Also known as Links, its objective is to connect a web page with another web page, it can be used both to move within the same web, and for another web page.
+
+It has a mandatory attribute called href, where we specify the path of the resource or the site that we want to obtain.
+
+They also have a "target" attribute, which configures how we want to view the resource or site we request
+
+Moving within the same page is through an anchor element: -->
+
+<body>
+  <a href="path-source-or-site">Path of the source or site</a><br>
+
+  <!-- Examples-->
+  <a href="00-instructions.html">Go to the 'Instructions'</a><br>
+  <a href="09-section-vs-article.html">Move between files of the project</a><br>
+  <a href="https://www.theodinproject.com">I am a link to 'The Odin Project' website</a><br>
+
+
+  <!-- Absolute paths:
+
+They have an http or https protocol and are unique in the network, they are usually used for external routes generally, except for very specific cases -->
+
+  <!-- Relative paths:
+
+They can be relative to the point where we are or relative to the root of the project (we will only use the bar / to load suggestions in case the destination page is not found
+
+It is recommended to use this route whenever possible in our projects)
+
+- They have no protocol
+
+If the resource is at the same level (folder), we will only put the name of the file, but if what we want is to leave a current folder (we will use ../ ) for each level we want to leave -->
+
+
+  <!-- Link attributes:
+
+target: Defines where the requested resource will be opened, as a general rule whenever you use absolute paths it would be 
+
+"_blank" (if we want to open it in a new tab)
+
+"_self" (it is the default value and it is like not doing nothing) with which it will open it in the same tab, we will hardly ever use the latter.
+
+download: It is a boolean attribute and is used to download the requested content
+
+- IMPORTANT - The resource must be on your own server.
+
+Navigation through Anchors (anchor):
+
+To be able to scroll within our page or between pages, we need to put the hash "#" inside the element <a href="#"></a> and the id="" in the part where we want it to go, without id= it won't work.
+
+In the case of doing it to a different page, we select the route using the slash and the destination followed by the entry with a "#" and the POST that we want, leaving something like this (/1stTest/home.html#Post1).
+
+-->
+
+  <!-- To go at specific section in the navbar by #id -->
+  <nav>
+    <p><a href="#Post1">Post1</a></p>
+    <p><a href="#Post2">Post2</a></p>
+    <p><a href="#Post3">Post3</a></p>
+    <p><a href="#Post4">Post4</a></p>
+    <p><a href="/1st-proof/the-avengers.html#Post5">post5</a></p>
+  </nav>
+
+  <!-- Same process to navigate between posts by #id in the body -->
+  <section>
+    <article>
+      <h1 id="Post1">Post 1</h1>
+      <h1 id="Post2">Post 2</h1>
+      <h1 id="Post3">Post 3</h1>
+      <h1 id="Post4">Post 4</h1>
+      <h1 id="Post5">Post 5</h1>
+    </article>
+  </section>
+
+  <!-- DEAD LINKS or EMPTY while testing JavaScript for example would be ("#")
+
+  <a href="#"> ... </a>
+  <a href="#" target="_blank">cat photos</a>
+
+-->
+
+  <!-- Converts an IMAGE to a LINK ("#")
+
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  
+  -->
+
+</body>
+
+</html>
