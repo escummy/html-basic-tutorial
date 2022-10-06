@@ -1,0 +1,146 @@
+<!-- Tables in HTML:
+  
+  Are used to tabulate content in a semantically correct way, and it is only used in some specific cases, although it will later be styled with CSS.
+
+The basic structure of a table is composed of:
+
+table -> Tag that encloses a table
+tr -> Table row, is the tag that builds a fixed
+td -> Table data, is the label that builds a cell
+
+
+Trick: The number of cells inside a <tr></tr> will set the number of columns in the table
+
+The TITLES of the tables are established with the <caption></caption> tag, it is a special tag, since not all tables need a title, but according to your specification it will be placed right after the <table></table tag >.
+
+The HEADERS of the tables are established with the <thead></thead> tag, in which a normal <tr></tr> tag will go inside, but in the case of cells, we establish them with the <th> tag in place of <td>
+
+  The content of the table must go inside the <tbody></tbody> tag to represent the body of the table, so optionally, we can also put a <tfoot></tfoot> to the table to establish a footer inside, this is something that some tables interpret as sum of amounts or total.
+
+To make the cells occupy more than one row or more than one column, we will use 2 ATTRIBUTES:
+
+  rowspan: For a cell to occupy more than one row (default value is 1)
+  colspan: so that a cell occupies more than one column (default value is 1), a common error in this attribute is not deleting the determined number of rows that we want to occupy, thus the table will not be unbalanced.
+
+  *If we go to "BreaK" and put a colspan we will see that it is not visible, but it is occupying the entire line of 5 cells, for that we will apply a small CSS demo.
+
+  *When what we want is to select a column, the <colgroup></colgroup> tag is used, which allows us to select a specific column. Within this tag, the <col> tag would be placed as many columns as we have, each <col> tag will give a column following the same order as the table.
+
+  While if what we need is for the <col> tag to group more than one column, the Span="" attribute will be placed on it (which would be exactly the same as a rowspan or colspan)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables</title>
+
+  <!-- Small detail of CSS, it is not the correct form, it is only for visual help of what each grouped column occupies -->
+
+  <style>
+    td {
+      background-color: antiquewhite;
+    }
+
+    tr {
+      background-color: bisque;
+    }
+
+    td:first-child,
+    tfoot {
+      background-color: bisque;
+    }
+
+
+    /* for a visual aid of what each grouped column occupies in the example-
+      col{
+        background-color: aquamarine;
+      } */
+  </style>
+</head>
+
+<body>
+  <h1>Tables</h1>
+  <table>
+    <colgroup>
+      <col>
+    </colgroup>
+    <caption>PLAN OF STUDY</caption>
+    <thead>
+      <tr>
+        <th></th>
+        <th>M</th>
+        <th>T</th>
+        <th>W</th>
+        <th>T</th>
+        <th>F</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>7:00 a 8:00</td>
+        <td>HTML</td>
+        <td>CSS</td>
+        <td>React</td>
+        <td>MongoDB</td>
+        <td>AWS</td>
+      </tr>
+      <tr>
+        <td>8:00 a 9:00</td>
+        <td>Javascript</td>
+        <td>TypeScript</td>
+        <td>MongoDB</td>
+        <td>Javascript</td>
+        <td>TypeScript</td>
+      </tr>
+      <tr>
+        <td>9:00 a 10:00</td>
+        <td>AWS</td>
+        <td>Git</td>
+        <td>AWS</td>
+        <td>CSS</td>
+        <td>Git</td>
+      </tr>
+      <tr>
+        <td>10:00 a 11:00</td>
+        <td colspan="5"></td>
+      </tr>
+      <tr>
+        <td>11:00 a 12:00</td>
+        <td>Node.js</td>
+        <td>HTML</td>
+        <td>Node.js</td>
+        <td rowspan="2">AWS</td>
+        <td>AWS</td>
+      </tr>
+      <tr>
+        <td>12:00 a 13:00</td>
+        <td>Git</td>
+        <td>APIs</td>
+        <td rowspan="2">APIs</td>
+        <td>Node.js</td>
+      </tr>
+      <tr>
+        <td>13:00 a 14:00</td>
+        <td>React</td>
+        <td>Bash</td>
+        <td>Bash</td>
+        <td>HTML</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5">Total Signatures</td>
+        <td>12</td>
+      </tr>
+    </tfoot>
+  </table>
+
+</body>
+
+</html>
