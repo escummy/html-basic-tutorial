@@ -1,0 +1,380 @@
+<!-- Forms
+  
+  We no longer paint data on the screen, we will use the forms to request information from the specific user.
+
+-->
+
+<!-- The basic structure of a form is made up of 4 ELEMENTS:
+
+    form -> It is the label that surrounds the form
+
+    label -> It serves to name the field that we are going to fill, it must have the for="" attribute to which an id="" will be indicated that will allow matching the label with its corresponding input
+
+    input -> Used to create a field that will allow the user to interact, whose only mandatory attribute is name=""
+
+    button -> Create a button to submit the form
+
+-->
+
+<!-- input type:
+
+    button: It behaves the same as the button <button>, but it does not send the form, it is usually given other specific uses in JavaScript
+    
+    submit: Used to submit the form (also)
+    hidden: Hidden field (can contain value but will not be displayed)
+    datetime: Obsolete (DO NOT USE)
+    date: It is used to see a date in the calendar
+    time: Used to enter a time
+    month: Used to enter a month
+    week: Used to enter the number of the week and year
+
+    datetime-local: Date and time (not recommended even if it looks nicer because it doesn't work in firefox)
+    TIP- Instead of using this, an alternative is to use an <input> of type date and another of type time
+
+    *These are often used a lot on mobile, since it makes it easier for the user, unlike on the web, to complete it with keyboard aids*
+
+    search: Used for search bars
+    email: Used for emails
+    tel: used to enter phone numbers
+    password: Used for passwords
+    url: Used to enter URLs
+
+    color: It is used to specify a color palette useful to the user
+    number: Used for numeric values
+    reset: It is used to reset the form
+    text: It is the value that appears by default
+    
+    range: It is used to establish a range scroll bar, we can also give it attributes (step="") (min="") and (max="").
+
+-->
+
+<!-- Selectable inputs (allow you to select from a series of options):
+
+    radio: Allows you to choose a single option from a list of related options
+
+    checkbox: Allows you to select multiple options from a list of related options
+
+    select: They create a list of options where we can select one or several (it is also not an attribute, it is a label itself, but it allows us to do so)
+
+    *Each option will go inside an <option></option> tag
+
+    *If we have many options, what we can do is sort them by categories through the <optgroup> tag and the label="" attribute to name the category we want.
+
+-->
+
+<!--
+  Another selectable element that emerged with HTML5 is the list type input, to which if the list attribute is added with the name of the selectable object, pressing < + D (it will give us the <DATALIST> tag) to which we will put an id= "", since it is quite useful because we can search an input for matching characters, that is, keywords within the <option value=""></option>, and show them if it contains any character that we put, in addition , using the value or the name of the option, we can give a brief description of the selectable object.
+
+  This works exactly the same as the <select>
+    
+    <form action="Path/receive page">
+      <input type="list" list="Animals">
+      <datalist id="Animals">
+
+-->
+<!-- Other <input>
+  
+  fieldset: It is used to group elements within a form
+  legend: represents a label for the content of a fieldset
+  
+  file: This input is used to upload files and send them from the form
+
+  meter: Represents a value in a known range
+  progress: Represents the progress of a task
+  textarea: Used to enter text in a form
+
+-->
+
+<!-- MOST IMPORTANT ATTRIBUTES OF THE FORMS
+  
+  placeholder -> Gives a hint in the field to fill in about what is required in lower opacity (when writing it disappears)
+
+  required -> makes a field required
+  readonly -> Makes a field read-only
+  
+  min - max -> Sets a numerical minimum and maximum
+  
+  mix length - max length -> Sets the minimum and maximum characters in a text field
+
+  selected -> Equivalent to the (plain checked) in the <select>, it is used to establish a default option
+
+  disabled -> Disables a field and will not be able to write to it
+  autofocus -> To put the focus by default and we can write in that field directly as soon as we restart the page
+
+-->
+
+<!-- How to send a form correctly through GET and POST -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+
+<body>
+  <!-- Pairing -->
+  <form action="Path/output-page>
+    <label for=" name">Name</label>
+    <input id="name">
+    <button>Send</button>
+  </form>
+
+  <!-- Simple form submission -->
+  <form action="Path/output-page>
+    <label for=" text">Name</label>
+    <input type="text">
+    <input type="submit">
+  </form>
+
+  <!-- Instead of using datetime-local, which is not seen in firefox -->
+  <form action="Path/output-page>
+    <input type=" date">
+    <input type="time">
+  </form>
+
+  <form action="Path/output-page>
+    <input type=" month">
+    <input type="week">
+  </form>
+
+  <!-- We put a <div> to separate and make it more aesthetic when viewing it from the mobile, we are going to check that the password is not secure at all in the port and local server from which we normally work.
+
+  To do this we will open the Terminal and write (ipconfig + enter) where we will find data from our personal IP and ports to be able to copy them and put them on the mobile.
+
+  Example: 196.0.0.1:5500/forms -->
+
+  <form action="Path/output-page>
+    <div>
+      <label> search
+        <input type=" search">
+    </label>
+    </div>
+    <div>
+      <label> phone
+        <input type="phone">
+      </label>
+    </div>
+    <div>
+      <label> email
+        <input type="email">
+      </label>
+    </div>
+    <div>
+      <label> password
+        <input type="password">
+      </label>
+    </div>
+    <div>
+      <label> url
+        <input type="url">
+      </label>
+    </div>
+  </form>
+
+  <!-- inputs EXTRA -->
+  <form action="Path/output-page>
+    <input type=" color">
+    <input type="number">
+    <input type="range" step="2" min="0" max="10">
+    <input type="reset">
+    <input type="text">
+  </form>
+
+  <!-- Inputs of radio type from one side or the other, in this example if we relate several elements of the same type name="" (we can select 'only 1' from the options of the same genre), and if what we want is that one marked by default appears, you will have to add the attribute ("checked") to dry, since it has no value.
+
+  All radio type inputs must have a mandatory value, which describes the mentioned field -->
+
+  <form action="Path/output-page>
+    <label> HTML
+      <input type=" radio">
+    </label>
+    <label>
+      <input type="radio">
+      HTML
+    </label>
+
+    <h2>Selectable items</h2>
+    <form action="Path/output-page>
+      <h3>Género</h3>
+      <label>Masculino
+        <input type=" radio" name="gender" value="male">
+      </label>
+      <label> Female
+        <input type="radio" name="gender" value="female">
+      </label>
+      <label> Unknown
+        <input type="radio" name="gender" value="unknown" checked>
+      </label>
+    </form>
+
+
+    <!-- Inputs of Checkbox type from one side or the other, in this example if we relate several elements of the same name="" type (we can select 'several' options of the same gender), and if what we want is for a marked one to appear by default, you will have to add the attribute ("checked") to dry, since it has no value.
+
+    All checkbox type inputs must have a mandatory value, which describes the mentioned field -->
+
+    <form action="Path/output-page>
+      <label> HTML
+        <input type=" checkbox">
+      </label>
+      <label>
+        <input type="checkbox">
+        HTML
+      </label>
+
+      <h2>Languages you know</h2>
+      <label> HTML
+        <input type="checkbox" name="language" value="html">
+      </label>
+      <label> CSS
+        <input type="checkbox" name="language" value="css">
+      </label>
+      <label> JavaScript
+        <input type="checkbox" name="language" value="javaScript">
+      </label>
+      <label> TypeScript
+        <input type="checkbox" name="language" value="typeScript">
+      </label>
+    </form>
+
+
+    <!-- Inputs of Select type, in this example if we relate different elements of the same genre, we will place the name="" attribute only to the select tag and the value="" attribute to each of the <option>.
+    
+    To select several options instead of just 1, we will put the multiple attribute to dry in the <select> tag -->
+
+    <form action="Path/output-page>
+      <select name=" Programming languages">
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="TypeScript">TypeScript</option>
+      </select>
+    </form>
+
+    <!-- Advanced select -->
+    <form action="Path/output-page>
+      <select name=" Pets">
+      <optgroup label="mammals">
+        <option value="Cats">Cats</option>
+        <option value="Dog">Dog</option>
+        <option value="Rabbit">Rabbit</option>
+        <option value="Hamster">Hamster</option>
+        <option value="Horse">Horse</option>
+      </optgroup>
+      <optgroup label="Birds">
+        <option value="Eagle">Eagle</option>
+        <option value="Seagull">Seagull</option>
+        <option value="Their">Their</option>
+        <option value="Pigeon">Pigeon</option>
+        <option value="Hawk">Hawk</option>
+      </optgroup>
+      <optgroup label="Reptiles">
+        <option value="Snake">Snake</option>
+        <option value="Iguana">Iguana</option>
+        <option value="Alligator">Alligator</option>
+        <option value="Dolfin">Dolfin</option>
+        <option value="Shark">Shark</option>
+      </optgroup>
+      </select>
+    </form>
+
+    <!-- <Datalist> -->
+    <form action="Path/output-page>
+      <input type=" list" list="Animals">
+      <datalist id="Animals">
+        <option value="Cats">Cats</option>
+        <option value="Dog">Dog</option>
+        <option value="Rabbit">Rabbit</option>
+        <option value="Hamster">Hamster</option>
+        <option value="Horse">Horse</option>
+        <option value="Eagle">Eagle</option>
+        <option value="Seagull">Seagull</option>
+        <option value="Their">Their</option>
+        <option value="Pigeon">Pigeon</option>
+        <option value="Hawk">Hawk</option>
+        <option value="Snake">Snake</option>
+        <option value="Iguana">Iguana</option>
+        <option value="Alligator">Alligator</option>
+      </datalist>
+    </form>
+
+    <!-- Other inputs -->
+
+    <form action="Path/output-page">
+      <fieldset>
+        <div>
+          <legend>Personal information</legend>
+          <label for="name">Name</label>
+          <input type="name" id="name">
+        </div>
+        <div>
+          <label for="surname">Surname</label>
+          <input type="name" id="surname">
+        </div>
+      </fieldset>
+    </form>
+
+    <!-- input of type file, meter, pregress, textarea...
+
+    This type of HTML-only input can't do much except to load the file, to show progress bar, thumbnails, etc., you need the help of CSS and JavaScript -->
+
+    <form action="Path/output-page>
+      <input type=" file">
+      <meter id="fuel" min="0" max="100" value="60" low="30" high="75" optimum="50">
+      </meter>
+
+      <!-- The progress input <progress></progress> can be set to a value and other attributes as it has <meter></meter>, otherwise it is left hanging because it needs the use of JavaScript for the progress to be move in real time or caused by some user factor -->
+
+      <label for="task">Task</label>
+      <progress id="task" max="100"></progress>
+    </form>
+
+    <!-- Input of type textarea, it is an input that we may use a lot -->
+
+    <form action="Path/output-page>
+      <label for=" message">Message</label>
+      <textarea name="" id="message" cols="50" rows="8"></textarea>
+    </form>
+
+    <!-- Useful attributes for forms: placeholder,required,readonly, min,max,min length, max length,selected, disabled, autofocus -->
+
+    <form action="Path/output-page>
+      <input type=" text" placeholder="Insert name" required>
+
+      <!-- Whenever we want a field that cannot be modified, it is better to set it to readonly, since it can be modified from the inspector as well as other elements (minify text to make it more difficult) -->
+
+      <input type="text" value="Read only" readonly>
+      <input type="text" value="Field deactivated" disabled>
+      <select name="numbers">
+        <option value="able">able</option>
+        <option value="disable" selected>disable</option>
+      </select>
+      <input type="number" min="0" max="10" required>
+      <input type="text" minlength="8" maxlength="20" required autofocus> from 0-20 numbers
+      <input type="submit">
+    </form>
+
+    <!-- Send a form correctly using the name="" (since otherwise it will be as if that field did not exist) and the form GET and POST to send them
+    
+    We check in the browser if the information is being sent correctly
+    (5500/send.html?name=&surname=) 
+
+    <form action="enviar.html" method="GET">
+    <form action="enviar.html" method="POST">
+
+    .Learn shipping differences.
+-->
+
+    <form action="enviar.html" method="GET">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+      <label for="surname">Surname</label>
+      <input type="text" id="surname" name="surname">
+      <input type="submit">
+    </form>
+</body>
+
+</html>

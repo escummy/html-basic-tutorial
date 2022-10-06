@@ -1,0 +1,123 @@
+<!-- Correct uses of the SECTION, ARTICLE and ASIDE tag -->
+
+<!-- Section: s a generic container that groups content that is related, when we create blocks whose content is within a total block, the semantically correct thing is to use a section -->
+
+<!-- Article: is a container that represents independent content, that is, we can read that fragment in any other site and it would still make sense by itself -->
+
+<!-- Aside: Used to represent related content that is not part of the main content -->
+
+<!-- NESTING: A "Section" can contain articles, for example, if we have several sections that talk about the same topic, such as talking about HTML tags, these should go inside a section, since the content is related each other, while "Article" would be independent content, since we could read one without having read the rest and it would still make sense on its own (as it is defined as an independent page component, this indicates that it could have a < header></header> and a <footer></footer>) -->
+
+<!-- There is also the case in which ARTICLE contains several sections, the independent article could be talking about browsers and this could contain sections such as "Most used browsers in 2021" -->
+
+<!-- EXAMPLE (SECTION): Different news that are not related -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section Vs Article</title>
+</head>
+
+<body>
+  <header>
+    <h1>Important national news</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Today's news</h2>
+      <article>
+        <!-- As standalone content you are allowed to have an article header and footer, but both are not required -->
+        <header>
+          <h3>News 1</h3>
+        </header>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, soluta? Aliquid sint eveniet delectus nihil,
+          animi voluptas voluptatem iste qui amet minima fuga ad maiores quod libero, quibusdam fugit corrupti.</p>
+        <footer>Date, source, info, author, source link, photo</footer>
+      </article>
+      <article>
+        <!-- As standalone content you are allowed to have an article header and footer, but both are not required -->
+        <header>
+          <h3>News 2</h3>
+        </header>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste nesciunt hic aspernatur, sunt debitis sequi,
+          sint ad nobis nisi voluptatem quibusdam. Sint beatae totam molestias necessitatibus aut ad reprehenderit hic?
+        </p>
+        <footer>Date, source, info, author, source link, photo</footer>
+      </article>
+      <article>
+        <!-- As standalone content you are allowed to have an article header and footer, but both are not required -->
+        <header>
+          <h3>News 3</h3>
+        </header>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quam at minima labore! Quod, dolorum cupiditate
+          unde quia ea eius recusandae omnis minima dolore minus cum? Deleniti, laborum. Dolore, omnis?</p>
+        <footer>Date, source, info, author, source link, photo</footer>
+      </article>
+    </section>
+    <!-- We could also put a section inside another section, because what it does is group related content (it would close the section here), so the h3 would become h4 in case of including an h1 before the h1, which would happen to be h2 and so on for this example -->
+  </main>
+</body>
+
+</html>
+
+
+EXAMPLE (ARTICLE): News that are related to each other
+
+
+<body>
+  <article>
+    <h2>Browser wars</h2>
+    <section>
+      <header>
+        <h3>Microsoft</h3>
+      </header>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, recusandae laborum est soluta accusamus aut
+        minima sequi voluptatum adipisci exercitationem sint quaerat ipsum odio illo repudiandae facilis ipsam
+        reiciendis blanditiis?</p>
+      <footer>Date, source, info, author, source link, photo</footer>
+    </section>
+    <section>
+      <header>
+        <h3>Netscape</h3>
+      </header>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla totam quasi doloribus consectetur, accusamus
+        ipsa dolore fuga dolorem sint rerum? Dolorum vel quod eos officia eum accusamus maxime labore cupiditate!</p>
+      <footer>Date, source, info, author, source link, photo</footer>
+    </section>
+  </article>
+</body>
+
+</html>
+
+
+
+Simple example of (ASIDE):
+
+<!-- It is used to represent directly related content but that is not part of the main content, that is, it talks about the same thing but is not part of the main content, be it a menu, related courses, a link to youtube, etcetera.
+  
+Semantically correct it would be placed outside the <main></main>, but both the W3C and the MDN consider it valid to put it both inside and outside the main content -->
+
+
+<!-- Outside is more correct because of the tag name -->
+
+<body>
+  <header>Advanced level programming courses</header>
+  <aside>Basic level courses from scratch</aside>
+  <main>
+    
+  </main>
+</body>
+
+
+<!-- Inside is also valid although it is not recommended -->
+
+<body>
+  <header>Advanced level programming courses</header>
+  <main>
+    <aside>Basic level courses from scratch</aside>
+  </main>
+</body>
