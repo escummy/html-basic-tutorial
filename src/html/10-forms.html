@@ -116,28 +116,36 @@
 </head>
 
 <body>
+  <form action="Path/output-page" method="get">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <label for="last-name">Last name:</label>
+    <input type="text" id="last-name" name="last-name">
+    <input type="submit" value="Submit">
+  </form>
+
   <!-- Pairing -->
-  <form action="Path/output-page>
-    <label for=" name">Name</label>
-    <input id="name">
+  <form action="Path/output-page" method="get">
+    <label for="first-name">First Name:</label>
+    <label for="last-name">Last name:</label>
     <button>Send</button>
   </form>
 
   <!-- Simple form submission -->
-  <form action="Path/output-page>
-    <label for=" text">Name</label>
+  <form action="Path/output-page">
+    <label for="text">Name</label>
     <input type="text">
     <input type="submit">
   </form>
 
   <!-- Instead of using datetime-local, which is not seen in firefox -->
-  <form action="Path/output-page>
-    <input type=" date">
+  <form action="Path/output-page">
+    <input type="date">
     <input type="time">
   </form>
 
-  <form action="Path/output-page>
-    <input type=" month">
+  <form action="Path/output-page">
+    <input type="month">
     <input type="week">
   </form>
 
@@ -147,10 +155,10 @@
 
   Example: 196.0.0.1:5500/forms -->
 
-  <form action="Path/output-page>
+  <form action="Path/output-page">
     <div>
       <label> search
-        <input type=" search">
+        <input type="search">
     </label>
     </div>
     <div>
@@ -176,8 +184,8 @@
   </form>
 
   <!-- inputs EXTRA -->
-  <form action="Path/output-page>
-    <input type=" color">
+  <form action="Path/output-page">
+    <input type="color">
     <input type="number">
     <input type="range" step="2" min="0" max="10">
     <input type="reset">
@@ -188,9 +196,9 @@
 
   All radio type inputs must have a mandatory value, which describes the mentioned field -->
 
-  <form action="Path/output-page>
+  <form action="Path/output-page">
     <label> HTML
-      <input type=" radio">
+      <input type="radio">
     </label>
     <label>
       <input type="radio">
@@ -198,10 +206,10 @@
     </label>
 
     <h2>Selectable items</h2>
-    <form action="Path/output-page>
-      <h3>Género</h3>
-      <label>Masculino
-        <input type=" radio" name="gender" value="male">
+    <form action="Path/output-page">
+      <h3>Gender</h3>
+      <label>Male
+        <input type="radio" name="gender" value="male">
       </label>
       <label> Female
         <input type="radio" name="gender" value="female">
@@ -216,9 +224,9 @@
 
     All checkbox type inputs must have a mandatory value, which describes the mentioned field -->
 
-    <form action="Path/output-page>
+    <form action="Path/output-page">
       <label> HTML
-        <input type=" checkbox">
+        <input type="checkbox">
       </label>
       <label>
         <input type="checkbox">
@@ -245,7 +253,7 @@
     
     To select several options instead of just 1, we will put the multiple attribute to dry in the <select> tag -->
 
-    <form action="Path/output-page>
+    <form action="Path/output-page">
       <select name=" Programming languages">
       <option value="html">HTML</option>
       <option value="css">CSS</option>
@@ -255,9 +263,9 @@
     </form>
 
     <!-- Advanced select -->
-    <form action="Path/output-page>
-      <select name=" Pets">
-      <optgroup label="mammals">
+    <form action="Path/output-page">
+      <select name="Pets">
+      <optgroup label="Mammals">
         <option value="Cats">Cats</option>
         <option value="Dog">Dog</option>
         <option value="Rabbit">Rabbit</option>
@@ -282,8 +290,8 @@
     </form>
 
     <!-- <Datalist> -->
-    <form action="Path/output-page>
-      <input type=" list" list="Animals">
+    <form action="Path/output-page">
+      <input type="list" list="Animals">
       <datalist id="Animals">
         <option value="Cats">Cats</option>
         <option value="Dog">Dog</option>
@@ -321,8 +329,8 @@
 
     This type of HTML-only input can't do much except to load the file, to show progress bar, thumbnails, etc., you need the help of CSS and JavaScript -->
 
-    <form action="Path/output-page>
-      <input type=" file">
+    <form action="Path/output-page">
+      <input type="file">
       <meter id="fuel" min="0" max="100" value="60" low="30" high="75" optimum="50">
       </meter>
 
@@ -334,14 +342,14 @@
 
     <!-- Input of type textarea, it is an input that we may use a lot -->
 
-    <form action="Path/output-page>
-      <label for=" message">Message</label>
+    <form action="Path/output-page">
+      <label for="message">Message</label>
       <textarea name="" id="message" cols="50" rows="8"></textarea>
     </form>
 
     <!-- Useful attributes for forms: placeholder,required,readonly, min,max,min length, max length,selected, disabled, autofocus -->
 
-    <form action="Path/output-page>
+    <form action="Path/output-page">
       <input type=" text" placeholder="Insert name" required>
 
       <!-- Whenever we want a field that cannot be modified, it is better to set it to readonly, since it can be modified from the inspector as well as other elements (minify text to make it more difficult) -->
